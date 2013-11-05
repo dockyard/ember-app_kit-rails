@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency 'rails', '~> 4.0.0'
+  s.add_dependency 'rails', '~> 3.2.0'
   s.add_dependency 'es6_module_transpiler-rails', '~> 0.0.3'
   s.add_dependency 'ember-rails', '>= 0.14.0'
   s.add_dependency 'ember-source', '~> 1.2.0.beta.2'
@@ -24,5 +24,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'jquery-rails'
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'poltergeist'
-  s.add_development_dependency 'byebug'
 end
