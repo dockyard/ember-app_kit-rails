@@ -19,6 +19,13 @@ You should not need to specify any additional core Ember depdendencies.
 
 TODO: Add generator details once they are complete.
 
+## Additional notes
+
+You are going to have to remove [Rails 4
+turbolinks](https://github.com/rails/turbolinks/) from your `Gemfile`,
+`//= require turbolinks` from your
+`app/assets/javascripts/application.js`, and `script` tag your `application.html.erb` file.
+
 ## Usage ##
 
 ### Generators ###
