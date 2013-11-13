@@ -1,2 +1,4 @@
-export default = Ember.Component.extend({
+var <%= class_name.camelize %>Component = Ember.Component.extend({
 });
+
+export default <%= class_name.camelize %>Component;

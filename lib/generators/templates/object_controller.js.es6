@@ -1,4 +1,5 @@
-export default = Ember.ObjectController.extend({
+var <%= class_name.camelize %>Controller = Ember.ObjectController.extend({
 
 });
 
+export default <%= class_name.camelize %>Controller;
