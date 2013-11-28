@@ -3,12 +3,14 @@ class Ember::Appkit::Rails::Engine < ::Rails::Engine
 
   config.ember_appkit.namespace = 'appkit'
   config.ember_appkit.asset_path = config.ember_appkit.namespace
-  config.ember_appkit.prefix_pattern = /^(controllers|components|models|views|helpers|routes|router|adapter)/
+  config.ember_appkit.prefix_patterns = [/^(controllers|components|models|views|helpers|routes|router|adapter)/]
 
   config.ember_appkit.enable_logging = ::Rails.env.development?
 
   initializer "ember_appkit.configure" do
-    ES6ModuleTranspiler.prefix_pattern = [config.ember_appkit.prefix_pattern, config.ember_appkit.namespace]
+    config.ember_appkit.prefix_patterns.each do |pattern|
+      ES6ModuleTranspiler.add_prefix_pattern pattern, config.ember_appkit.namespace
+    end
 
     config.handlebars ||= ActiveSupport::OrderedOptions.new
     config.handlebars.output_type   = :amd
