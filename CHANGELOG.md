@@ -1,3 +1,7 @@
+## 0.4.1
+
+* Fix typo in `adapter.js.es6.erb` template.
+
 ## 0.4.0
 
 * Changed Rails controller to use respond\_with instead of render
