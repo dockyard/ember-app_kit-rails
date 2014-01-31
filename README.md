@@ -1,6 +1,6 @@
-# EmberAppkitRails
+# Ember App Kit Rails
 
-Ember Appkit for the Asset Pipeline
+Ember App Kit for the Asset Pipeline.
 
 **This gem is still pre-1.0 and as such its public API will likely change over the course of heading towards 1.0**
 
@@ -128,11 +128,11 @@ Any 3rd party software should be put into `vendor/assets/javascripts`
 
 ### Generators ###
 
-Ember Appkit Rails provides the following generators:
+Ember App Kit Rails provides the following generators:
 
 * `ember:bootstrap`
 
-  Initializes Ember Appkit Rails into your project by creating the required files
+  Initializes Ember App Kit Rails into your project by creating the required files
   (`router.es6`, `ember-app.es6`, and the directory structure). Also, removes
   `turbolinks` from `Gemfile` and `app/views/layouts/application.html.erb`.
   The `app/assets/javascripts/` directory from your app is removed.
@@ -242,8 +242,8 @@ other environment specific settings should be made in these files.
 
 Ember Data expect to work with a namespace of `api/vX` where `X` is the
 current version of the backend API. To update this value you can
-override the the value of `config.ember.api_version` in 
-`config/application.rb`. 
+override the the value of `config.ember.api_version` in
+`config/application.rb`.
 
 The routing to the API endpoints in your application need to match
 `api/vX`. For example, you can do the following in `config/routes.rb`
@@ -278,7 +278,7 @@ configuration:
 
 ```ruby
 config.ember.paths.app = 'app/assets/javascripts'
-``` 
+```
 
 Adding this to your `config/application.rb` file will generate your
 assets into `app/assets/javascripts` instead of `app/`
@@ -290,7 +290,7 @@ The default AMD namespace is `app`. Modify this in your
 
 ```ruby
 config.ember.namespaces.app = 'ember'
-``` 
+```
 
 The AMD namespace for the router is `config/` you can change this in
 your `config/application.rb` file as well:
@@ -301,7 +301,7 @@ config.ember.namespaces.config = 'ember_config'
 
 ## Custom Ember Builds ##
 
-By default Ember Appkit Rails will serve up the proper builds of Ember,
+By default Ember App Kit Rails will serve up the proper builds of Ember,
 Ember Data, and Handlebars depending upon the environment from their
 gems. However, you can add custom builds of each library to your project
 to override the default builds. The files you add **must** match a
@@ -325,7 +325,7 @@ copy in the gem.
 * [Alex Navasardyan](http://twitter.com/twokul)
 * [Robert Jackson](http://twitter.com/rwjblue)
 
-A lot of the "real work" was done by [Stefan Penner](http://twitter.com/stefanpenner) with the original [Ember Appkit](https://github.com/stefanpenner/ember-app-kit) project.
+A lot of the "real work" was done by [Stefan Penner](http://twitter.com/stefanpenner) with the original [Ember App Kit](https://github.com/stefanpenner/ember-app-kit) project.
 
 [We are very thankful for the many contributors](https://github.com/dockyard/ember-appkit-rails/graphs/contributors)
 
