@@ -59,6 +59,15 @@ module Ember
         remove_jbuilder_from_gemfile
       end
 
+      def add_ember_app_create_to_layout
+        path = Pathname.new(destination_root).join('app','views','layouts','application.html.erb')
+        return unless path.exist?
+
+        inject_into_file path, after: "<%= yield %>" do
+          "\n\n<script>\n  window.#{application_name.camelize} = require('app').default.create();\n</script>"
+        end
+      end
+
       def add_greedy_rails_route
         insert_into_file 'config/routes.rb', before: /^end$/ do
           "\n" +

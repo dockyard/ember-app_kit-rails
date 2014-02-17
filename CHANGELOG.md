@@ -16,6 +16,7 @@
 * Make sure attributes are camelized in scaffold templates.
 * Add Teaspoon integration by default https://github.com/modeset/teaspoon.
 * Generate test automatically when running scaffold.
+* Initialize App on application layout.
 
 ## 0.4.0
 

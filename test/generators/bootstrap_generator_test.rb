@@ -39,7 +39,7 @@ class BootstrapGeneratorTest < Rails::Generators::TestCase
   test "create bootstrap with custom app name" do
     run_generator ["-n", "MyApp"]
 
-    assert_file "#{config_path}/application.js", /MyApp = /
+    assert_file "app/views/layouts/application.html.erb", /MyApp = /
 
     assert_files
   end
@@ -49,7 +49,7 @@ class BootstrapGeneratorTest < Rails::Generators::TestCase
       run_generator
 
       assert_files
-      assert_file "#{config_path}/application.js", /Blazorz = /
+      assert_file "app/views/layouts/application.html.erb", /Blazorz = /
     end
   end
 
