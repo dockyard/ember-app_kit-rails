@@ -144,6 +144,13 @@ should use `lib/` to write any custom code that does not belong in
 Any 3rd party software should be put into `vendor/assets/javascripts`
 (this may change)
 
+## Additional notes
+
+You are going to have to remove [Rails 4
+turbolinks](https://github.com/rails/turbolinks/) from your `Gemfile`,
+`//= require turbolinks` from your
+`app/assets/javascripts/application.js`, and `script` tag your `application.html.erb` file.
+
 ## Usage ##
 
 ### Generators ###
